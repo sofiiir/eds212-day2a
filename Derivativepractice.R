@@ -42,12 +42,16 @@ df_dz
 #create and store a function 
 fy <- expression((2*y^3 + 1)^4 - 8*y^3)
 
+
 #find the derivative with respect to y
-df_dy <- D(expr = fy, name = "y")
-df_dy
+df_dp <- D(expr = fy, name = "y")
+df_dp
 
 #find the slope of T(y) at a range of values 
 y <-seq(from = -0.4, to = 2.0, by = 0.1)
 
 #evaluate the slope of T(y) at each of those values 
-eval(df_dy)
+eval(df_dp)
+
+#one small change 
+dh <- expression (9*f)
